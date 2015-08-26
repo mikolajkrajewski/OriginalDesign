@@ -10,20 +10,34 @@ void stadium()
 {
   background(150);
   noStroke();
-  fill(0,255,0);
+  fill(2,115,9);
   rect(0,100,700,400);
-  fill(255,0,0);
+  fill(250,236,40);
   rect(0,40,700,7);
   rect(0,53,700,7);
   rect(0,540,700,7);
   rect(0,553,700,7);
   kezarTrack();
+  noStroke();
+  fill(32,165,11);
+  rect(200,230,300,140);
+  stroke(255);
+  strokeWeight(5);
+  line(205,235,495,235);
+  line(205,235,205,365);
+  line(205,365,495,365);
+  line(495,235,495,365);
+  line(350,235,350,365);
+  noFill();
+  ellipse(350,300,50,50);
+  rect(205,270,30,60);
+  rect(465,270,30,60);
 }
 void kezarTrack()
 {
   smooth();
   noStroke();
-  fill(0,0,255);
+  fill(239,49,20);
   stroke(255);
   strokeWeight(5);
   rect(200,150,300,300);
@@ -45,9 +59,4 @@ void kezarTrack()
   line(200,397,500,397);
   line(200,415,500,415);
   line(200,432,500,432);
-  noStroke();
-  fill(255,0,0);
-  rect(200,230,300,140);
-  
-  
 }
