@@ -14,13 +14,18 @@ import java.io.IOException;
 
 public class OriginalDesign extends PApplet {
 
+int red;
+int green;
+int blue;
 public void setup()
 {
   size(700,600);
+
 }
 public void draw()
 {
   stadium();
+  man();
 }
 public void stadium()
 {
@@ -75,6 +80,31 @@ public void kezarTrack()
   line(200,397,500,397);
   line(200,415,500,415);
   line(200,432,500,432);
+}
+public void man()
+{
+	noStroke();
+	if(mousePressed == true)
+	{
+		red = 255;
+		green = 0;
+		blue = 0;
+
+	}
+	else if(mousePressed == false) 
+	{
+		red = 0;
+		green = 0;
+		blue = 255;
+	}
+	fill(red,green,blue);
+	ellipse(mouseX,mouseY,20,20);
+	rect(mouseX-10,mouseY+10,20,30);
+	rect(mouseX-10,mouseY+40,5,20);
+	rect(mouseX+5,mouseY+40,5,20);
+	quad(mouseX-10,mouseY+10,mouseX-8,mouseY+12,mouseX-23,mouseY+27,mouseX-25,mouseY+25);
+	quad(mouseX+10,mouseY+10,mouseX+8,mouseY+12,mouseX+23,mouseY+27,mouseX+25,mouseY+25);
+
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "OriginalDesign" };
