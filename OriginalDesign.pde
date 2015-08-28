@@ -1,15 +1,20 @@
 int red;
 int green;
 int blue;
+int xPos1=0;
+int xPos2=700;
 void setup()
 {
   size(700,600);
+  smooth();
 
 }
 void draw()
 {
   stadium();
   man();
+  car1();
+  car2();
 }
 void stadium()
 {
@@ -89,4 +94,35 @@ void man()
 	quad(mouseX-10,mouseY+10,mouseX-8,mouseY+12,mouseX-23,mouseY+27,mouseX-25,mouseY+25);
 	quad(mouseX+10,mouseY+10,mouseX+8,mouseY+12,mouseX+23,mouseY+27,mouseX+25,mouseY+25);
 
+}
+void car1()
+{
+
+  fill(255,0,255);
+  rect(xPos1,50,60,35);
+  fill(255,0,0);
+  rect(xPos1+29,55,30,15);
+  fill(0);
+  ellipse(xPos1+10,85,20,20);
+  ellipse(xPos1+50,85,20,20);
+  xPos1=xPos1+3;
+  if(xPos1>700)
+  {
+    xPos1=0;
+  }
+}
+void car2()
+{
+  fill(0,255,0);
+  rect(xPos2-60,495,60,35);
+  fill(0,0,255);
+  rect(xPos2-59,500,30,15);
+  fill(0);
+  ellipse(xPos2-10,530,20,20);
+  ellipse(xPos2-50,530,20,20);
+  xPos2=xPos2-3;
+  if(xPos2<0)
+  {
+    xPos2=700;
+  }
 }
